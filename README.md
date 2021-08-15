@@ -1,1 +1,0 @@
-Graph algorithms in Python.

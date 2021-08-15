@@ -1,0 +1,13 @@
+    '''
+    From list of lists or tuples to dictionary.
+    '''
+    graph = {}
+    
+    for vertex in links:
+        if vertex[0] not in graph.keys():
+            graph[vertex[0]] = []
+         
+        if vertex[1] != None:
+            graph[vertex[0]].append(vertex[1])
+        
+    return graph

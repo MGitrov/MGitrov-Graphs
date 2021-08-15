@@ -46,15 +46,15 @@ def edge_distance(graph, initialVertex):
         
     return edgeDistance
 -------------------------------------------
-# Introducing the graph to the user.
+#Introducing the graph to the user.
 graph = edges_in_dictionary(links)
 print(f"Your current graph is:\n{graph}\n")
 
-# Creating a set of all the unvisited vertices.
+#Creating a set of all the unvisited vertices.
 unvisitedSet = unvisited_vertices(graph)
 print(f"Unvisited vertices:\n{unvisitedSet}\n")
 
-# Taking user input for the initial vertex, and performs a check whether the chosen vertex is isolated.
+#Taking user input for the initial vertex, and performs a check whether the chosen vertex is isolated.
 userInput = input(f"Please enter the vertex you want to be the initial (a-f): ")
 
 while graph[userInput] == []:
@@ -62,18 +62,18 @@ while graph[userInput] == []:
     userInput = input("Please enter the vertex you want to be the initial (a-f): ")
 
 print("\n")
-# Assigning distance value to every node: zero for the initial vertex and infinity for all other vertices.
+#Assigning distance value to every node: zero for the initial vertex and infinity for all other vertices.
 vertexDistance = vertex_distance(graph, userInput)
 print(f"Vertices labels:\n{vertexDistance}\n")
 
-# Sets the initial vertex as current.
+#Sets the initial vertex as current.
 currentVertex = userInput
 
-# Assigning distance value to every edge.
+#Assigning distance value to every edge.
 edgeDistance = edge_distance(graph, userInput)
 print(f"The distances:\n{edgeDistance}\n")
 
-# Logic.
+#Logic.
 for vertex in graph:
     if vertex == currentVertex:
         tempVertex = ""

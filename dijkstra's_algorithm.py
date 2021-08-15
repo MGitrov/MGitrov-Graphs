@@ -11,7 +11,7 @@ def unvisited_vertices(graph):
         unvisitedSet.add(vertex)
         
     return unvisitedSet
--------------------------------------------
+
 def vertex_distance(graph, initialVertex):
     '''
     Assigning distance value to every node: zero for the initial vertex and infinity for all other vertices.
@@ -26,7 +26,7 @@ def vertex_distance(graph, initialVertex):
             vertexDistance[vertex] = math.inf
             
     return vertexDistance
--------------------------------------------    
+  
 def edge_distance(graph, initialVertex):
     '''
     Assigning distance value to every edge.
@@ -45,7 +45,7 @@ def edge_distance(graph, initialVertex):
                 edgeDistance[vertex + neighbor] = random.randint(1, 30)
         
     return edgeDistance
--------------------------------------------
+
 #Introducing the graph to the user.
 graph = edges_in_dictionary(links)
 print(f"Your current graph is:\n{graph}\n")
